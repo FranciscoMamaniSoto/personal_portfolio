@@ -540,3 +540,303 @@ footer .container {
     gap: 1rem;
     justify-content: flex-start;
 }
+
+/* Message Bar Styles */
+/* Add these to the end of your style.css file */
+
+.message-bar {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: #E5E4DE; /* Slightly darker than the #F0EFE9 background */
+    padding: 8px 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.message-container {
+    display: flex;
+    width: fit-content; /* Allow enough space for all messages */
+    animation: scrollMessages 15s linear infinite; /* Adjust speed by changing the time */
+}
+
+.message-content {
+    display: flex;
+    white-space: nowrap;
+}
+
+.message-content span {
+    display: inline-block;
+    padding: 0 25px;
+    color: #333;
+    font-size: 0.9rem;
+    position: relative;
+}
+
+.message-content span:after {
+    content: "•";
+    position: absolute;
+    right: 8px;
+    color: #666;
+}
+
+.message-content span:last-child:after {
+    content: "";
+}
+
+/* Animation for left-to-right scrolling */
+@keyframes scrollMessages {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+/* Pause animation on hover */
+.message-bar:hover .message-container {
+    animation-play-state: paused;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .message-content span {
+        padding: 0 15px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Updated Project Card Styling */
+/* Add these styles to your style.css file */
+
+/* Make project cards invisible initially */
+.project-card {
+    background-color: transparent;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: none;
+    transition: background-color 0.4s ease, transform 0.3s ease;
+    border: 1px solid transparent;
+    position: relative;
+    padding-bottom: 60px; /* Make room for the buttons at the bottom */
+}
+
+.project-card:hover {
+    background-color: #E0DED4; /* Darker shade of the background color */
+    transform: translateY(-5px);
+    border: 1px solid #E5E4DE;
+}
+
+/* Keep the image styling */
+.project-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.project-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Project info area */
+.project-info {
+    padding: 1.5rem;
+}
+
+.project-info h3 {
+    margin-bottom: 0.5rem;
+}
+
+/* Project tags */
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.tag {
+    padding: 0.3rem 0.6rem;
+    background-color: rgba(248, 249, 250, 0.5);
+    border-radius: 30px;
+    font-size: 0.75rem;
+    color: var(--light-text);
+}
+
+/* Reposition project links */
+.project-links {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+}
+
+/* Smaller, cleaner buttons */
+.project-links .text-btn {
+    font-size: 0.85rem;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.project-links .text-btn:hover {
+    opacity: 1;
+}
+
+.github-btn {
+    font-size: 0.85rem;
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 1px solid currentColor;
+    padding: 0.4rem 0.8rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.github-btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Dark Mode Toggle Button */
+/* Add these styles to your style.css file */
+
+:root {
+    /* Light theme variables (default) */
+    --bg-color: #F0EFE9;
+    --text-color: #333;
+    --light-text: #666;
+    --lighter-text: #999;
+    --card-bg: transparent;
+    --message-bar-bg: #E5E4DE;
+    --card-hover-bg: #E0DED4;
+    --border-color: #eee;
+}
+
+/* Dark theme variables */
+body.dark-theme {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --light-text: #cccccc;
+    --lighter-text: #aaaaaa;
+    --card-bg: #1e1e1e;
+    --message-bar-bg: #2a2a2a;
+    --card-hover-bg: #2c2c2c;
+    --border-color: #444;
+}
+
+/* Apply theme colors */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header, footer {
+    background-color: var(--bg-color);
+    border-color: var(--border-color);
+}
+
+a {
+    color: var(--primary-color);
+}
+
+.message-bar {
+    background-color: var(--message-bar-bg);
+}
+
+.message-content span {
+    color: var(--text-color);
+}
+
+/* Project cards in dark mode */
+.project-card:hover {
+    background-color: var(--card-hover-bg);
+    border-color: var(--border-color);
+}
+
+.tag {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--light-text);
+}
+
+
+.theme-toggle-container {
+    position: fixed; /* Fixed position so it stays in view when scrolling */
+    bottom: 20px; /* Position from bottom */
+    right: 20px; /* Position from right */
+    z-index: 1000;
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+    outline: none;
+}
+
+.theme-toggle-track {
+    width: 50px;
+    height: 24px;
+    background-color: #F0EFE9; /* Original background color, always stays the same */
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    padding: 0 3px;
+    border: 2px solid #333; /* Black border */
+}
+
+/* Keep the track the same in both light and dark mode */
+body.dark-theme .theme-toggle-track {
+    background-color: #F0EFE9; /* Keep it the same as light mode */
+    border: 2px solid #333;
+}
+
+.theme-toggle-thumb {
+    width: 18px;
+    height: 18px;
+    background-color: #333; /* Black thumb */
+    border-radius: 50%;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    position: absolute;
+    left: 3px; /* Fixed left position when not toggled */
+}
+
+/* Fixed position when toggled to dark mode */
+body.dark-theme .theme-toggle-thumb {
+    background-color: #333; /* Keep it black */
+    left: 29px; /* Fixed right position when toggled */
+}
+
+/* Subtle animation on theme toggle */
+.theme-toggle-thumb:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    background-color: rgba(51, 51, 51, 0.3); /* Black with opacity */
+    border-radius: 50%;
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+.theme-toggle:active .theme-toggle-thumb:before {
+    width: 35px;
+    height: 35px;
+}

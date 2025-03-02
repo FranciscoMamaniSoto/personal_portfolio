@@ -20,7 +20,12 @@
     "technologies": [
       "Python",
       "Pandas",
-      "Plotly"
+      "Plotly",
+      "Streamlit",
+      "PyTorch",
+      "Scikit-learn",
+      "TensorFlow",
+      "Keras"
     ],
     "github_url": "https://github.com/yourusername/project2",
     "date": "2023-03-20"

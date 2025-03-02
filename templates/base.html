@@ -8,6 +8,27 @@
     {% block extra_css %}{% endblock %}
 </head>
 <body>
+    <!-- Scrolling message bar -->
+    <div class="message-bar">
+        <div class="message-container">
+            <div class="message-content">
+                <span>Welcome to my personal portfolio website!</span>
+                <span>I specialize in data science and machine learning.</span>
+                <span>Check out my latest projects and articles.</span>
+                <span>Always open to collaboration opportunities.</span>
+                <span>Thanks for visiting!</span>
+            </div>
+            <!-- Duplicate the content for seamless looping -->
+            <div class="message-content">
+                <span>Welcome to my personal portfolio website!</span>
+                <span>I specialize in data science and machine learning.</span>
+                <span>Check out my latest projects and articles.</span>
+                <span>Always open to collaboration opportunities.</span>
+                <span>Thanks for visiting!</span>
+            </div>
+        </div>
+    </div>
+    
     <header>
         <div class="container">
             <h1 class="logo"><a href="{{ url_for('index') }}">Your Name</a></h1>
@@ -37,6 +58,15 @@
             </div>
         </div>
     </footer>
+    
+    <!-- Dark mode toggle button - now fixed at bottom right corner -->
+    <div class="theme-toggle-container">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+            <div class="theme-toggle-track">
+                <div class="theme-toggle-thumb"></div>
+            </div>
+        </button>
+    </div>
     
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
     {% block extra_js %}{% endblock %}
