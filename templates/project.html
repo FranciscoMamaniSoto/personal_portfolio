@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}{{ project.title }}{% endblock %}
+
+{% block content %}
+<section class="project-detail">
+    <div class="back-link">
+        <a href="{{ url_for('portfolio') }}">← Back to Portfolio</a>
+    </div>
+    
+    <h1>{{ project.title }}</h1>
+    
+    <div class="project-meta">
+        <div class="project-date">{{ project.date }}</div>
+        <div class="project-technologies">
+            {% for tech in project.technologies %}
+            <span class="tag">{{ tech }}</span>
+            {% endfor %}
+        </div>
+    </div>
+    
+    {% if project.image %}
+    <div class="project-image-full">
+        <img src="{{ url_for('static', filename='images/' + project.image) }}" alt="{{ project.title }}">
+    </div>
+    {% endif %}
+    
+    <div class="project-content">
+        <p>{{ project.description }}</p>
+        
+        <!-- Add more detailed project content here -->
+        <!-- You would typically expand the projects.json schema to include more detailed content -->
+    </div>
+    
+    {% if project.github_url %}
+    <div class="project-links">
+        <a href="{{ project.github_url }}" target="_blank" class="btn github-btn">View on GitHub</a>
+    </div>
+    {% endif %}
+</section>
+{% endblock %}

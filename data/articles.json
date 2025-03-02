@@ -1,0 +1,25 @@
+[
+  {
+    "id": "article1",
+    "title": "Introduction to Machine Learning",
+    "content": "Machine learning is a field of study that gives computers the ability to learn without being explicitly programmed. It focuses on developing computer programs that can access data and use it to learn for themselves.\n\nThe process of learning begins with observations or data, such as examples, direct experience, or instruction, in order to look for patterns in data and make better decisions in the future based on the examples we provide. The primary aim is to allow computers to learn automatically without human intervention or assistance and adjust actions accordingly.\n\nMachine learning algorithms are often categorized as supervised, unsupervised, and reinforcement learning...",
+    "image": "article1.jpg",
+    "tags": [
+      "Machine Learning",
+      "AI",
+      "Tutorial"
+    ],
+    "date": "2023-02-10"
+  },
+  {
+    "id": "article2",
+    "title": "Data Visualization Best Practices",
+    "content": "When creating data visualizations, it's important to follow certain best practices to ensure your graphics effectively communicate the intended information.\n\nFirst, always start with a clear purpose. Before creating any visualization, ask yourself what specific question you're trying to answer or what insight you want to convey.\n\nSecond, choose the right type of visualization for your data. Bar charts are great for comparing values across categories, line charts show trends over time, and scatter plots reveal relationships between variables.\n\nThird, keep it simple. Avoid cluttering your visualizations with unnecessary elements like excessive gridlines, decorative graphics, or 3D effects that don't add value...",
+    "image": "article2.jpg",
+    "tags": [
+      "Data Visualization",
+      "Best Practices"
+    ],
+    "date": "2023-04-05"
+  }
+]

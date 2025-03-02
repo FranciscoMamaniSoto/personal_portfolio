@@ -1,0 +1,28 @@
+[
+  {
+    "id": "project1",
+    "title": "Machine Learning Project",
+    "description": "A project using machine learning to predict user behavior based on historical data. This project implements several classification algorithms and compares their performance.",
+    "image": "project1.jpg",
+    "technologies": [
+      "Python",
+      "TensorFlow",
+      "Scikit-learn"
+    ],
+    "github_url": "https://github.com/yourusername/project1",
+    "date": "2023-01-15"
+  },
+  {
+    "id": "project2",
+    "title": "Data Analysis Dashboard",
+    "description": "Interactive dashboard for analyzing sales data and visualizing trends. Built with Python and Plotly Dash, this tool helps stakeholders make data-driven decisions.",
+    "image": "project2.jpg",
+    "technologies": [
+      "Python",
+      "Pandas",
+      "Plotly"
+    ],
+    "github_url": "https://github.com/yourusername/project2",
+    "date": "2023-03-20"
+  }
+]
