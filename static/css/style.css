@@ -6,7 +6,7 @@
     --text-color: #333;
     --light-text: #666;
     --lighter-text: #999;
-    --bg-color: #fff;
+    --bg-color: #F0EFE9;
     --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     --transition: all 0.3s ease;
     --max-width: 1200px;
@@ -107,11 +107,11 @@ nav a:hover {
     color: var(--primary-color);
 }
 
-/* Hero Section */
+/* Hero Section - Modified for plain text */
 .hero {
     padding: 4rem 0;
     text-align: center;
-    background-color: var(--secondary-color);
+    background-color: var(--bg-color);
 }
 
 .hero-content {
@@ -241,7 +241,7 @@ section h2 {
     font-size: 0.9rem;
 }
 
-/* Projects Grid */
+/* Projects Grid - Unchanged for portfolio page */
 .project-grid, .article-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -362,7 +362,7 @@ section h2 {
 /* Contact */
 .contact {
     text-align: center;
-    background-color: var(--secondary-color);
+    background-color: var(--bg-color);
 }
 
 .contact p {
@@ -401,8 +401,9 @@ section h2 {
 /* Footer */
 footer {
     padding: 2rem 0;
-    background-color: var(--secondary-color);
+    background-color: var(--bg-color);
     text-align: center;
+    border-top: 1px solid #eee;
 }
 
 footer .container {
@@ -472,4 +473,70 @@ footer .container {
     .filter-btn {
         font-size: 0.8rem;
     }
+}
+
+/* Homepage-specific styles */
+/* Add these to the end of your style.css file */
+
+/* Make tech list more minimal on the homepage */
+.tech-list li {
+    background-color: transparent;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0;
+    font-size: 0.9rem;
+    border-bottom: 1px solid var(--light-text);
+    margin-right: 0.5rem;
+}
+
+/* Simple styling for the homepage */
+.hero, .about, .contact {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem 0;
+    text-align: left;
+}
+
+.hero {
+    padding-top: 4rem;
+}
+
+.hero h1, .hero h2 {
+    text-align: left;
+}
+
+.hero-content {
+    text-align: left;
+}
+
+.about h2, .contact h2 {
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+.tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+/* Remove card-like styling for homepage sections */
+.about-content {
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+}
+
+/* Make the tech stack more minimalistic */
+.tech-stack {
+    margin-top: 2rem;
+    border-top: 1px solid #eee;
+    padding-top: 1.5rem;
+}
+
+.cta-buttons {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
 }
